@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS disney_db;
+CREATE DATABASE disney_db;
