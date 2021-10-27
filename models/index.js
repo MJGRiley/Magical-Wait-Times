@@ -21,14 +21,6 @@ Post.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-Post.hasOne(User, {
-    foreignKey: 'post_id'
-});
-
-Post.hasOne(Ride, {
-    foreignKey: 'post_id'
-});
-
 Lands.hasMany(Ride, {
     foreignKey: 'land_id',
     onDelete: 'CASCADE'
