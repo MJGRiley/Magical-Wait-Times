@@ -28,5 +28,4 @@ Post.hasOne(Ride, {
     foreignKey: 'post_id'
 });
 
-
-
+module.exports = 
