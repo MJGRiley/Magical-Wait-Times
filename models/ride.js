@@ -28,7 +28,7 @@ Ride.init(
         freezeTableName: true,
         timestamps: false,
         underscored: true,
-        modelName: 'post',
+        modelName: 'ride',
         }
     
 );

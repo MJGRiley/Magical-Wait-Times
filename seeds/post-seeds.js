@@ -11,7 +11,7 @@ const postData = [
     title: "It's A Small World is HORRIBLE!",
     description: 'This cool off with slow and fun ride.',
     rating: 1,
-    user_id: 1,
+    user_id: 3,
     ride_id: 2
   }
 ];
