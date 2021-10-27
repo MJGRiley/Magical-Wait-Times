@@ -7,15 +7,7 @@ const postData = [
     rating: 5,
     user_id: 1,
     
-  },
-  {
-    title: "DON'T RIDE SPACE MOUNTAIN!",
-    text: 'iloveapis',
-  },
-  {
-    username: 'joshcoder',
-    password: 'disneyrocks'
-  },
+  }
 ];
 
 const seedProducts = () => User.bulkCreate(postData);
