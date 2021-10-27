@@ -29,5 +29,22 @@ Post.hasOne(Ride, {
     foreignKey: 'post_id'
 });
 
+Land.hasMany(Ride, {
+    foreignKey: 'land_id',
+    onDelete: 'CASCADE'
+});
+
+Ride.belongsTo(Land, {
+    foreignKey: 'land_id'
+});
+
+module.exports = {
+    User,
+    Post,
+    Land,
+    Ride,
+  };
+  
+
 
 
