@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Ride extends Model {}
+class Lands extends Model {}
 
-Ride.init(
+Lands.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -15,19 +15,12 @@ Ride.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        land_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'lands',
-                key: 'id'
-            },
-        },
         sequelize,
         freezeTableName: true,
         timestamps: false,
         underscored: true,
-        modelName: 'post',
+        modelName: 'lands',
     }
 );
 
-module.exports = Ride;
+module.exports = Lands;
