@@ -1,7 +1,7 @@
 const User = require('./user');
 const Post = require('./post');
 const Ride = require('./ride');
-const Land = require('./lands');
+const Lands = require('./lands');
 
 Ride.hasMany(Post, {
     foreignKey: 'ride_id',
@@ -29,19 +29,19 @@ Post.hasOne(Ride, {
     foreignKey: 'post_id'
 });
 
-Land.hasMany(Ride, {
+Lands.hasMany(Ride, {
     foreignKey: 'land_id',
     onDelete: 'CASCADE'
 });
 
-Ride.belongsTo(Land, {
+Ride.belongsTo(Lands, {
     foreignKey: 'land_id'
 });
 
 module.exports = {
     User,
     Post,
-    Land,
+    Lands,
     Ride,
   };
   
