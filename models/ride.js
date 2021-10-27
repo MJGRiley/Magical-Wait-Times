@@ -22,12 +22,15 @@ Ride.init(
                 key: 'id'
             },
         },
+    },    
+        {
         sequelize,
         freezeTableName: true,
         timestamps: false,
         underscored: true,
         modelName: 'post',
-    }
+        }
+    
 );
 
 module.exports = Ride;
