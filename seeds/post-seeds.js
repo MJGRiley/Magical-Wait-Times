@@ -8,8 +8,8 @@ const postData = [
     user_id: 1,
     ride_id: 4
   },{
-    title: "It's A Small World is HORRIBLE!",
-    description: 'This cool off with slow and fun ride.',
+    title: "Space Mountain is soooo fast",
+    description: 'Ride was way too fast and no warning was given to me by any Cast Member.',
     rating: 1,
     user_id: 3,
     ride_id: 2
