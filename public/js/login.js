@@ -12,7 +12,7 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');  //TODO: /profile doesn't exist yet
+        document.location.replace('/');  //TODO: /profile doesn't exist yet
       } else {
         alert(response.statusText);
       }
@@ -34,7 +34,7 @@ const signupFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/profile');
+            document.location.replace('/');
         } else {
             alert(response.statusText);
         }

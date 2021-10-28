@@ -1,63 +1,29 @@
 //copied, need to make it our own
 const router = require('express').Router();
-const { Post, Comment, User } = require('../../Main/models');
-
+const { Ride } = require('../../models');
+const withAuth = require('../../utils/auth');
 // get all posts for homepage
-router.get('', async (req, res) => {
-  try {
-    const postData = await Post.findAll({
-      include: [User],
-    });
 
-    const posts = postData.map((post) => post.get({ plain: true }));
-
-    res.render('all-posts', { posts });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 
 // get single post
-router.get('/post/:id', async (req, res) => {
+//hfdhfgeughgh
+
+
+router.get('/', async (req, res) => {
   try {
-    const postData = await Post.findByPk(req.params.id, {
-      include: [
-        User,
-        {
-          model: Comment,
-          include: [User],
-        },
-      ],
-    });
-
-    if (postData) {
-      const post = postData.get({ plain: true });
-
-      res.render('single-post', { post });
-    } else {
-      res.status(404).end();
-    }
+    const rideData = await Ride.findAll();
+    res.status(200).json(rideData);
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
-
-  res.render('login');
+router.get('/:id', (req, res) => {
+  // Find a single book by its primary key (book_id)
+  Ride.findByPk(req.params.id).then((rideData) => {
+    res.json(rideData);
+  });
 });
 
-router.get('/signup', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
-
-  res.render('signup');
-});
 
 module.exports = router;
