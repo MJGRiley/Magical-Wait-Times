@@ -1,0 +1,54 @@
+
+*{
+    background-color:whitesmoke
+}
+
+
+.headerTex{
+    background-color:darkblue;
+    font-family: 'Satisfy', cursive;
+    font-size: 70px;
+    
+    
+
+}
+.nav{
+    background-color:darkblue;
+    font-family: 'Courgette', cursive;
+}
+.header-dark {
+    background: darkblue;
+    background-size:cover;
+    padding-bottom:20px;
+    font-family: 'Satisfy', cursive;
+    font-size: 20px;
+    color:white;
+    
+    
+    
+}
+  .header-dark h3 {
+      text-align: center;
+      color:white;
+  }
+
+section{
+    padding: 30px;
+    margin:10px
+}
+
+ul{
+    list-style: none;
+}
+
+.w3-container{
+    font-family: 'Zen Old Mincho', serif;
+    font-size:20px;
+    border: 10px solid
+}
+
+h4{
+    font-family:'Zen Old Mincho', serif;
+    font-weight: bold;
+}
+
