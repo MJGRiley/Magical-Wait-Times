@@ -6,5 +6,5 @@ const rideR = require('./ride')
 router.use('/users', userR);
 router.use('/post', postR);
 router.use('/ride', rideR);
-//jhfghrhgj
+
 module.exports = router

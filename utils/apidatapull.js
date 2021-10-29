@@ -14,12 +14,12 @@ const pullData =  () => {
         if (error) { //returns with nothing if there's an error
             return
         }
-        fs.writeFile('../models/WDWMKWTDATA.txt', JSON.stringify(data), (err) => {
-            if (err) {
-                return console.log(err);
-              }
-              console.log(data);
-        })
+        // fs.writeFile('../models/WDWMKWTDATA.txt', JSON.stringify(data), (err) => {
+        //     if (err) {
+        //         return console.log(err);
+        //       }
+        //       console.log(data);
+        // })
         return data
     })
 }
