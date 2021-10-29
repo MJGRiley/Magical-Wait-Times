@@ -1,6 +1,3 @@
-const pullData = require('./utils/apidatapull')
-const APIData = pullData() //pulls the data from queue-times.com and saves it to a file to be read by the config files
-//this is the CORS error work around
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
@@ -13,7 +10,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const hbs = exphbs.create({ helpers }); //helpers don't exist yet
+const hbs = exphbs.create({ helpers });
 
 const sess = {
     secret: 'Super secret secret',
