@@ -1,20 +1,32 @@
+*{
+    background-color:darkcyan
+}
+.headerTex{
+    background-color:darkblue;
+    
+}
+
 .header-dark {
     background: darkblue;
     background-size:cover;
-    padding-bottom:80px;
+    padding-bottom:20px;
     
     
 }
   .header-dark h3 {
       text-align: center;
-      color:white
+      color:white;
   }
 
-  .mapSection{
-    width: 500px;
-    height: 500px;
-    padding: 50px;
-    border: 1px solid red;
-    align-items: center;
+  .mapBox{
+    
+        background-color: blue;
+        width: 50%;
+        border:  solid darkblue;
+        padding: 45%;
+        margin: auto;
+        color:white;
+        border-width:15px;  
+        border-style:ridge;
+    
   }
-  
