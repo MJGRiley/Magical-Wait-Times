@@ -1,13 +1,13 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
   
-    const name = document.querySelector('#project-name').value.trim();
-    const description = document.querySelector('#project-desc').value.trim();
+    const name = document.querySelector('#username').value.trim();
+    const password = document.querySelector('#password').value.trim();
   
-    if (name && description) {
-      const response = await fetch(`/api/ride`, {
+    if (name && password) {
+      const response = await fetch(`/api/`, {
         method: 'GET',
-        body: JSON.stringify({ name, description }),
+        body: JSON.stringify({ name, password }),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -38,10 +38,7 @@ const newFormHandler = async (event) => {
   };
   
   document
-    .querySelector('.new-project-form')
+    .querySelector('.loginSubmit')
     .addEventListener('submit', newFormHandler);
   
-  document
-    .querySelector('.project-list')
-    .addEventListener('click', delButtonHandler);
   
