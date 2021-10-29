@@ -3,28 +3,12 @@ const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
-//.jhfjgigjgji
-// router.post('/', withAuth, async (req, res) => {
-//     try{
-    
-//         const newUser = await User.create({
-//             username: req.body.username,
-//             password: req.body.password,
+router.post('/', withAuth, async (req, res) => {
+    try{
+        const newUser = await User.create({
+            username: req.body.username,
+            password: req.body.password,
             
-//         });
-    
-//         req.session.save(() => {
-//             req.session.user_id = newUser.id;
-//             req.session.username = newUser.username;
-//             req.session.logged_in = true;
-
-//             res.json(newUser);
-//             console.log(newUser);
-//         });
-//     } catch (err) {
-//         res.status(500).json(err);
-//     }
-// });
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
