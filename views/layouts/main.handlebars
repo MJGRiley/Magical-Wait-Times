@@ -1,4 +1,4 @@
-{{!-- copied from 14/minproj --}}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,35 +6,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Magical Wait Time</title>
-  {{!-- <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css"> --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Satisfy&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="openP.css">
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Magical Wait Time</a>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/user">User</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
+   
+    <div class= "w3-center">
+        <div class="header-dark ">
+            <h3 class = "headerTex w3-center">Magical Wait Times</h3>
+            <nav class="nav">
+                <a href="">ridesInfo</a>
+                <a href="reviews.html">reviews</a>
+              </nav>
+         </div>
+        
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9   offset-md-2">
+                        <h1 class="text-center">What park would you like to enter?</h1>
+                       
+                        
+                    </div>
+                  
+                </div>
+                
+            </div>
+            
+        
+    </div>
+    <div class = "mapBox">
+        
+</div>
+
       {{{ body }}}
-    </main>
-    <footer>
-      <a href="https://queue-times.com/en-US">Powered by Queue-Times.com</a>
-    </footer>
-  </div>
+ 
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
