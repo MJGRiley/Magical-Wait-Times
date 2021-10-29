@@ -1,15 +1,21 @@
 *{
-    background-color:darkcyan
+    background-color:whitesmoke
 }
+
+
 .headerTex{
     background-color:darkblue;
+    font-family: 'Satisfy', cursive;
+    font-size: 70px;
     
+
 }
 
 .header-dark {
     background: darkblue;
     background-size:cover;
     padding-bottom:20px;
+    
     
     
 }
