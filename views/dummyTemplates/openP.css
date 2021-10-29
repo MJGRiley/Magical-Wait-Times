@@ -1,0 +1,20 @@
+.header-dark {
+    background: darkblue;
+    background-size:cover;
+    padding-bottom:80px;
+    
+    
+}
+  .header-dark h3 {
+      text-align: center;
+      color:white
+  }
+
+  .mapSection{
+    width: 500px;
+    height: 500px;
+    padding: 50px;
+    border: 1px solid red;
+    align-items: center;
+  }
+  
