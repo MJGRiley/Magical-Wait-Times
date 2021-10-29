@@ -1,11 +1,12 @@
+const pullData = require('./utils/apidatapull')
+const APIData = pullData() //pulls the data from queue-times.com and saves it to a file to be read by the config files
+//this is the CORS error work around
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
-const pullData = require('./utils/apidatapull')
-pullData() //pulls the data from queue-times.com and saves it to a file to be read by the config files
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
