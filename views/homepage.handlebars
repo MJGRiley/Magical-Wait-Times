@@ -1,17 +1,21 @@
-<img src="../../public/images/WDWMKpage/50th.png" alt="Walt Disney World Magic Kingdom 50th Anniversary">
+<img
+  src="/images/WDWMKpage/50th.png"
+  alt="Walt Disney World Magic Kingdom 50th Anniversary"
+/>
 <!-- Loop over each object in the projects array -->
-{{#each users as |user| }}
-<div class="row align-center mb-5">
-  <div class="col-md-6">
-    <h2> {{user.name}}</h2>
+{{#each users as |user|}}
+  <div class="row align-center mb-5">
+    <div class="col-md-6">
+      <h2> {{user.name}}</h2>
+    </div>
+    <div class="col-md-6">
+      <h3><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
+    </div>
   </div>
-  <div class="col-md-6">
-    <h3><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
-  </div>
-</div>
 {{/each}}
-<form class="loginSubmit"action="submit">
-<input id="username" type="text">
-<input id="password" type="submit">
+<form class="loginSubmit" action="submit">
+  <input id="username" autofocus placeholder="username" type="text" />
+  <input id="password" placeholder="password" type="text" />
+  <input type="submit">
 </form>
-<script src="../public/js/login.js">  </script>
+<script src="/js/login.js"> </script>
