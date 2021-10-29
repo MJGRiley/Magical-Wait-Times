@@ -36,3 +36,19 @@ section{
     padding: 30px;
     margin:10px
 }
+
+ul{
+    list-style: none;
+}
+
+.w3-container{
+    font-family: 'Zen Old Mincho', serif;
+    font-size:20px;
+    border: 10px solid
+}
+
+h4{
+    font-family:'Zen Old Mincho', serif;
+    font-weight: bold;
+}
+
