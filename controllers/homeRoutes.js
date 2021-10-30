@@ -9,6 +9,7 @@ router.get('/', async (req, res) => {
     }
 });
 
+
   // router.get('/user', async (req, res) => {
   //   try {
   //     // Find the logged in user based on the session ID
@@ -16,6 +17,14 @@ router.get('/', async (req, res) => {
   //       attributes: { exclude: ['password'] },
   //   //     include: [{ model: Ride }],
   //     });
+
+ // router.get('/land', async (req, res) => {
+ //   try {
+ //     // Find the logged in user based on the session ID
+ //     const userData = await User.findByPk(req.session.user_id, {
+ //       attributes: { exclude: ['password'] },
+ //   //     include: [{ model: Ride }],
+ //     });
   
   //     const user = userData.get({ plain: true });
   
