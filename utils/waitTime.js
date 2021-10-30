@@ -14,17 +14,42 @@ const adventureArray = ["Swiss Family Treehouse", "The Magic Carpets of Aladdin"
 const frontierArray = ["Splash Mountain", "Big Thunder Mountain Railroad", "Country Bear Jamboree"]
 
 // Access wait times by Promise
-const CheckWaitTimes = (rideName) => {
-    DisneyWorldMagicKingdom.GetWaitTimes().then((rideTimes) => {
-        rideTimes.forEach((ride) => {
-            console.log(`${ride.name}: ${ride.waitTime} minutes wait (${ride.status})`);
-        });
+const CheckWaitTimes = (landName) => {
+    DisneyWorldMagicKingdom.GetWaitTimes()
+    .then((rideTimes) => {
+        const tempArray = []
+        switch (landName) {
+            case 'fantasyland':  tempArray = getRideTimes(fantasyArray);
+                break;
+            case 'tomorrowland': tempArray = getRideTimes(tomorrowArray);
+                break;
+            case 'libertysquare': tempArray = getRideTimes(libertyArray);
+                break;
+            case 'adventureland': tempArray = getRideTimes(adventureArray);
+                break;
+            case 'frontierland': tempArray = getRideTimes(frontierArray);
+                break;
+        }
+        console.log(tempArray)
+        return tempArray;
     }).catch((error) => {
         console.error(error);
     }).then(() => {
         setTimeout(CheckWaitTimes, 1000 * 60 * 5); // refresh every 5 minutes
         
     });
+
+    getRIdeTimes = (rides) => {
+        const tempArray =[]
+        rideTimes.forEach((ride) => {
+            if (rides.includes(ride)) {
+                tempArray.push(ride)
+            }
+        })
+        console.log(tempArray)
+        return tempArray
+    }
    
 };
-CheckWaitTimes();
+
+module.export = CheckWaitTimes;

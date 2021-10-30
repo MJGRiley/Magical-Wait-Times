@@ -1,77 +1,70 @@
 const router = require('express').Router();
-const { User, Ride } = require('../models');
 const withAuth = require('../utils/auth');
-
 
 router.get('/', async (req, res) => {
     try {
-      // Get all projects and JOIN with user data
-      
-  
-      // Pass serialized data and session flag into template
-      res.render('homepage', { 
-    
-        logged_in: req.session.logged_in 
-      });
+      res.render('homepage');
     } catch (err) {
       res.status(500).json(err);
     }
-  });
+});
 
-  router.get('/user', async (req, res) => {
-    try {
-      // Find the logged in user based on the session ID
-      const userData = await User.findByPk(req.session.user_id, {
-        attributes: { exclude: ['password'] },
-    //     include: [{ model: Ride }],
-      });
+  // router.get('/user', async (req, res) => {
+  //   try {
+  //     // Find the logged in user based on the session ID
+  //     const userData = await User.findByPk(req.session.user_id, {
+  //       attributes: { exclude: ['password'] },
+  //   //     include: [{ model: Ride }],
+  //     });
   
-      const user = userData.get({ plain: true });
+  //     const user = userData.get({ plain: true });
   
-      res.render('user', {
-        ...user,
-        // logged_in: true
-      });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
-//   router.get('/profile', withAuth, async (req, res) => {
-//     try {
-//       // Find the logged in user based on the session ID
-//       const userData = await User.findByPk(req.session.user_id, {
-//         attributes: { exclude: ['password'] },
-//         include: [{ model: Project }],
-//       });
+  //     res.render('user', {
+  //       ...user,
+  //       // logged_in: true
+  //     });
+  //   } catch (err) {
+  //     res.status(500).json(err);
+  //   }
+  // });
+
+  // router.get('/profile', withAuth, async (req, res) => {
+  //   try {
+  //     // Find the logged in user based on the session ID
+  //     const userData = await User.findByPk(req.session.user_id, {
+  //       attributes: { exclude: ['password'] },
+  //       include: [{ model: Project }],
+  //     });
   
-//       const user = userData.get({ plain: true });
+  //     const user = userData.get({ plain: true });
   
-//       res.render('profile', {
-//         ...user,
-//         logged_in: true
-//       });
-//     } catch (err) {
-//       res.status(500).json(err);
-//     }
-//   });
+  //     res.render('profile', {
+  //       ...user,
+  //       logged_in: true
+  //     });
+  //   } catch (err) {
+  //     res.status(500).json(err);
+  //   }
+  // });
 
 
 router.get('/login', (req, res) => {
     if(req.session.loggedIn) {
-        res.redirect('/user');
+        res.redirect('/login');
         return;
     }
-
-    res.render('login');
+    console.log(req)
+    const user = req.body
+       res.render('login', user);
 });
-//jfgjdhgh
-router.get('/signup', (req, res) => {
-    if(req.session.loggedIn) {
-        res.redirect('/');
-        return;
-    }
 
-    res.render('signup');
-});
+// router.get('/signup', (req, res) => {
+//     if(req.session.loggedIn) {
+//         res.redirect('/');
+//         return;
+//     }
+
+//     res.render('signup');
+// });
 
 module.exports = router;
