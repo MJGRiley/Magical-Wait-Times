@@ -10,7 +10,7 @@ router.use('/users', userR);
 router.use('/post', postR);
 router.use('/ride', rideR);
 
-router.use('land', landR)
+//router.use('/land', landR)
 router.use('/login', loginR);
 
 module.exports = router

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const withAuth = require('../utils/auth');
+const { User } = require('../models');
 
 router.get('/', async (req, res) => {
     try {
@@ -56,24 +56,25 @@ router.get('/', async (req, res) => {
   //   }
   // });
 
-
 router.get('/login', (req, res) => {
     if(req.session.loggedIn) {
         res.redirect('/login');
-        return;
     }
-    console.log(req)
+    //console.log(req.session.user_id)
+    //const userData = await User.findOne({ where: { id: req.session.user_id } })
+    //console.log(userData)
     const user = req.body
-       res.render('login', user);
+    (console.log("homeRoutes " + user))
+       res.render('login');
 });
 
-// router.get('/signup', (req, res) => {
+// router.get('/login/signup', (req, res) => {
 //     if(req.session.loggedIn) {
 //         res.redirect('/');
 //         return;
 //     }
 
-//     res.render('signup');
+//     res.render('login');
 // });
 
 module.exports = router;
