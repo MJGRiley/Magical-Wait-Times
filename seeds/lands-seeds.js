@@ -6,7 +6,7 @@ const landsData = [
     description: 'Escape the real world and jump into a place of imagination and fantasy!'
   },
   {
-    title: 'Fomorrowland',
+    title: 'Tomorrowland',
     description: 'Glimpse into the future and see all the magic that lies ahead!'
   },
   {
