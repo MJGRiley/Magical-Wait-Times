@@ -1,6 +1,4 @@
 const router = require('express').Router();
-// const { User } = require('../models');
-// const withAuth = require('../../utils/auth');
 
 router.post('/signup', async (req, res) => {
     try {
@@ -35,10 +33,10 @@ router.post('/', async (req, res) => {
         res.status(400).json({ message: 'Incorrect email or password, please try again' });
         return;
       }
-      req.session.save(() => {//Where is this user_id coming from?
-        req.session.user_id = userData.id;//I don't know what this does
+      req.session.save(() => {
+        req.session.user_id = userData.id;
         req.session.logged_in = true;
-        //res.json({ user: userData, message: 'You are now logged in!' });
+        //res.json({ user: userData, message: 'You are now logged in!' }); //this will break the app
       });
       const user = res.body.username;
       console.log('api/login ' + user)
@@ -47,7 +45,8 @@ router.post('/', async (req, res) => {
       res.status(400).json(err);
     }
 });
-router.post('/logout', (req, res) => {
+
+router.post('/logout', (req, res) => { // not yet functional
       if (req.session.logged_in) {
         req.session.destroy(() => {
           res.status(204).end();
