@@ -1,6 +1,8 @@
 # Magical Wait Times
 
+
   [![MIT License Badge](https://img.shields.io/badge/License-MIT_License-blue)](https://img.shields.io/badge/License-MIT_License-blue)
+
 
   ## Description
   At the most magical place on Earth, who has time to waste? Nobody! On the click of a button, review the insider scoop on rides for you and your family to plan the best trip of your life with Mickey and friends!

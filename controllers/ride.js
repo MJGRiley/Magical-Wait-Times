@@ -6,7 +6,7 @@ router.get('/ride/:land/:id', async (req, res) => {
         const postData = await Post.findAll({
             where: {
                 ride_id: req.params.id
-            } 
+            }
         })
         const rideData = await Ride.findOne({
             where: {
@@ -14,14 +14,10 @@ router.get('/ride/:land/:id', async (req, res) => {
             }
         })
         const posts = await postData.map((temp) => temp.get({ plain: true }))
-        console.log(posts);
         const ride = await rideData.get({
             plain: true
         });
-        res.render('ride', {
-            ride,
-            posts,
-        }  )
+        res.render('ride', {ride, posts})
         }catch (err) {
      res.redirect('/map');
     }

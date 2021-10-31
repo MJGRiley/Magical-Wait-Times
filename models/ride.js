@@ -26,7 +26,7 @@ Ride.init(
                 key: 'id'
             },
         },
-    },    
+    },
         {
         sequelize,
         freezeTableName: true,

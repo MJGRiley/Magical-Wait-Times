@@ -1,4 +1,3 @@
-
 const fantasyland = () =>{
    window.location = "/land/fantasyland"
 }

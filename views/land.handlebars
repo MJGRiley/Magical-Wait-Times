@@ -1,11 +1,12 @@
-<head> <link rel="stylesheet" href="/css/openP.css">
-    <link rel="stylesheet" href="/css/style.css"></head>
-<h1 class="welcomeLand">Welcome to {{lands.title}}</h1>
-<p>{{lands.description}}</p>
-<ul>
-    {{#each rides as |ride|}}
-    
-    <li><a href="/ride/{{ride.land_id}}/{{ride.id}}">{{ride.title}}</a></li>
- 
-    {{/each}}
- </ul>
+<head>
+    <link rel="stylesheet" href="/css/openP.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+    <h1 class="welcomeLand">Welcome to {{lands.title}}</h1>
+    <p class="description">{{lands.description}}</p>
+    <h2 class="listRide"> Enjoy the following attractions:</h2>
+    <ul>
+        {{#each rides as |ride|}}
+            <li class="rideList"><a href="/ride/{{ride.land_id}}/{{ride.id}}">{{ride.title}}</a></li>
+        {{/each}}
+    </ul>

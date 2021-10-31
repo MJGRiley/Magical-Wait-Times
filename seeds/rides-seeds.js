@@ -141,7 +141,6 @@ const ridesData = [
     land_id: 5,
     image: "https://res.cloudinary.com/dndp5yqyt/image/upload/bo_40px_solid_black/w_600,h_400,r_10/v1635709455/Disney/Country_aifypg.png"
   },
-
 ];
 
 const seedProducts = () => Ride.bulkCreate(ridesData);

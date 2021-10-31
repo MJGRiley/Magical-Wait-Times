@@ -13,16 +13,15 @@ router.post('/',  async (req, res) => {
     } catch (err) {
       res.status(400).json(err);
     }
-  });
+});
 
-  router.put('/:id', withAuth, async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
     try {
       const [affectedRows] = await Post.update(req.body, {
         where: {
           id: req.params.id,
         },
       });
-  
       if (affectedRows > 0) {
         res.status(200).end();
       } else {
@@ -31,12 +30,6 @@ router.post('/',  async (req, res) => {
     } catch (err) {
       res.status(500).json(err);
     }
-  });
+});
 
-//   router.get()
-  
-
-
-
-
-  module.exports = router;
+module.exports = router;
