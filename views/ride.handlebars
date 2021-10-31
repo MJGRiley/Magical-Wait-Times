@@ -1,6 +1,20 @@
-{{ride.title}}
-{{this.title}}
-<h3>Hello</h3>
-{{#each post}}
-{{this.comment id where ride = ride.title}}
-{{/each}}
+<h3 id="ride_id">{{ride.id}}</h3><h3>{{ride.title}}</h3>
+<h5 id="land_id">{{ride.land_id}}</h5>
+
+ <h4>Leave a comment on your experience</h4>
+  <form id="new-post-form" class="card-body">
+    <label class="form-label" for="post-title" >Title</label>
+    <input type="text" name="post-title" id="title"  placeholder="Title" />
+
+    <label class="form-label" for="description-body" id="comment">comment</label>
+    <textarea name="post-body" class="form-input" placeholder="leave a comment"></textarea>
+
+    <button type="submit" class="btn">Post</button>
+  </form>
+
+<p>previous comments</p>
+  <ul>
+{{#each posts as |post|}}
+<li>{{this.title}}{{post.description}}</li>
+{{/each}}</ul>
+<script src="/js/post.js"></script>
