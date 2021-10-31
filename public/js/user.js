@@ -19,9 +19,9 @@ const newFormHandler = async (event) => {
         alert('Failed to create project');
       }
     }
-  };
+};
   
-  const delButtonHandler = async (event) => {
+const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
   
@@ -35,10 +35,4 @@ const newFormHandler = async (event) => {
         alert('Failed to delete project');
       }
     }
-  };
-  
-  document
-    .querySelector('.loginSubmit')
-    .addEventListener('submit', newFormHandler);
-  
-  
+};

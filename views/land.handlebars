@@ -1,7 +1,11 @@
-{{land.title}}
 
+<h1>Welcome to {{lands.title}}</h1>
+<p>{{lands.description}}</p>
 <ul>
+    {{#each rides as |ride|}}
     {{#each ride}}
-    <li><a href="/ride">{{this.title}}</a></li>
+    
+    <li><a href="/ride/{{ride.land_id}}/{{ride.id}}">{{this}}</a></li>
+    {{/each}}
     {{/each}}
  </ul>

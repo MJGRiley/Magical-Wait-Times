@@ -1,11 +1,11 @@
 // include the Themeparks library
-const Themeparks = require("themeparks");
+// const Themeparks = require("themeparks");
 
 // access a specific park
 //  Create this *ONCE* and re-use this object for the lifetime of your application
 //  re-creating this every time you require access is very slow, and will fetch data repeatedly for no purpose
 
-const DisneyWorldMagicKingdom = new Themeparks.Parks.WaltDisneyWorldMagicKingdom();
+// const DisneyWorldMagicKingdom = new Themeparks.Parks.WaltDisneyWorldMagicKingdom();
 
 const fantasyArray = ['Prince Charming Regal Carrousel', "Mickey's Philhar Magic", "Peter Pan's Flight", "it's a small world", "Under the Sea ~ Journey of the Little Mermaid", "The Barnstormer", "Dumbo the Flying Elephant", "Mad Tea Party", "The Many Adventures of Winnie the Pooh", "Seven Dwarfs Mine Train"]
 const tomorrowArray = ["Tomorrowland Speedway", "Space Mountain", "Astro Orbiter", "Tomorrowland Transit Authority PeopleMover", "Walt Disney's Carousel of Progress", "Buzz Lightyear's Space Ranger Spin", "Monsters, Inc. Laugh Floor"]
@@ -51,5 +51,20 @@ const CheckWaitTimes = (landName) => {
     }
    
 };
+ module.exports = (land) => {
+    switch (land) {
+        case 'fantasyland': return fantasyArray;
+        
+        case 'tomorrowland': return tomorrowArray;
+           
+        case 'libertysquare': return libertyArray;
+            
+        case 'adventureland': return adventureArray;
+            
+        case 'frontierland': return frontierArray;
+            
+    }
+}
 
-module.export = CheckWaitTimes;
+
+
