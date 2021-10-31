@@ -16,7 +16,7 @@
   * [Usage](#usage)
   * [Credits](#credits)
   * [License](#license)
-  * [Contact](#contact)
+
 
   ## Installation
   Clone repository. Run "npm i" in the command line. Run "npm server.js" from the command line to run on a local host or access the deployed web application [here](https://magical-wait-times.herokuapp.com/).
