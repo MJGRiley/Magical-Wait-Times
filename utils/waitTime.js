@@ -1,7 +1,9 @@
 // include the Themeparks library
 // const Themeparks = require("themeparks");
 
-// access a specific park
+//Themeparks library worked on Rachel's mac but not on PC even after attempting to install Python
+
+// to access a specific park
 //  Create this *ONCE* and re-use this object for the lifetime of your application
 //  re-creating this every time you require access is very slow, and will fetch data repeatedly for no purpose
 
@@ -36,33 +38,25 @@ const CheckWaitTimes = (landName) => {
         console.error(error);
     }).then(() => {
         setTimeout(CheckWaitTimes, 1000 * 60 * 5); // refresh every 5 minutes
-        
     });
 
     getRIdeTimes = (rides) => {
         const tempArray =[]
         rideTimes.forEach((ride) => {
-            if (rides.includes(ride)) {
-                tempArray.push(ride)
-            }
+            if (rides.includes(ride)) {tempArray.push(ride)}
         })
         console.log(tempArray)
         return tempArray
     }
-   
-};
- module.exports = (land) => {
+}
+
+module.exports = (land) => {
     switch (land) {
         case 'fantasyland': return fantasyArray;
-        
         case 'tomorrowland': return tomorrowArray;
-           
         case 'libertysquare': return libertyArray;
-            
         case 'adventureland': return adventureArray;
-            
         case 'frontierland': return frontierArray;
-            
     }
 }
 

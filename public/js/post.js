@@ -11,13 +11,11 @@ const postFormHandler = async (event) => {
           headers: { 'Content-Type': 'application/json' },
         });
         if (response.ok) {
-        document.location.reload();      
+            document.location.reload();
         } else {
-          alert('failed to submit post'+ response.statusText);
+            alert('failed to submit post'+ response.statusText);
         }
-      }
+    }
 };
-
-
 
 document.querySelector('#new-post-form').addEventListener('submit', postFormHandler);

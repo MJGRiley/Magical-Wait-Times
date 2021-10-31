@@ -22,15 +22,9 @@ router.get('/land/:id',  async (req, res) => {
             },
         })
         const rides =  rideData.map((temp) => temp.get({ plain: true }))
-        const landsData = await Lands.findOne({
-            where: {
-                id: temp
-            },
-            });
+        const landsData = await Lands.findOne({where: { id: temp }});
             if (landsData) {
                 const lands = await landsData.get({ plain: true });
-                console.log(lands.id)
-                console.log("this for lands" + lands.title);
         console.log()
         res.render('land', {lands, rides,})
       } else {

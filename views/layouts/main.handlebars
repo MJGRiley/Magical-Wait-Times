@@ -14,7 +14,6 @@
 </head>
 
 <body>
-   
     <div class= "w3-center">
         <div class="header-dark ">
             <h3 class = "headerTex w3-center popOut">Magical Wait Times</h3>
@@ -22,15 +21,10 @@
               </nav>
          </div>
     </div>
-
-      {{{ body }}}
- 
-
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  
-  
-  {{/if}}
+    {{{ body }}}
+<!-- Render script for logged in users only -->
+    {{#if logged_in}}
+        <a href="/logout">Logout</a>
+    {{/if}}
 </body>
-
 </html>
