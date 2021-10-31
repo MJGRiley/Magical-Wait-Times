@@ -95,8 +95,34 @@ h1{
 
 .leaveComment {
     text-align: center;
+    margin-top: 40px;
 }
 
 .card-body {
     text-align: center;
+}
+.previous {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.form-label2 {
+    margin-top: 500px;
+}
+
+.btn {
+   position: absolute;
+   margin-top: 10px;
+}
+
+.list1 {
+  text-decoration: underline;
+
+
+}
+
+li {
+    text-align: center;
+    list-style-type: none;
+    
 }

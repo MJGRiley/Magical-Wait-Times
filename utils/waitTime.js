@@ -2,6 +2,7 @@
 // const Themeparks = require("themeparks");
 
 //Themeparks library worked on Rachel's mac but not on PC even after attempting to install Python
+//This is the library that gets wait times
 
 // to access a specific park
 //  Create this *ONCE* and re-use this object for the lifetime of your application
@@ -59,6 +60,3 @@ module.exports = (land) => {
         case 'frontierland': return frontierArray;
     }
 }
-
-
-
