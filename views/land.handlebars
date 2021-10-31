@@ -3,9 +3,11 @@
 <p>{{lands.description}}</p>
 <ul>
     {{#each rides as |ride|}}
-    {{#each ride}}
+    {{log 'pls work' ride}}
+   
+    {{log 'please work'}}
     
-    <li><a href="/ride/{{ride.land_id}}/{{ride.id}}">{{this}}</a></li>
-    {{/each}}
+    <li><a href="/ride/{{ride.land_id}}/{{ride.id}}">{{ride.title}}</a></li>
+ 
     {{/each}}
  </ul>
