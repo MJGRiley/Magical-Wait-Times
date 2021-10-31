@@ -10,7 +10,7 @@ const postData = [
     title: "Space Mountain is soooo fast",
     description: 'Ride was way too fast and no warning was given to me by any Cast Member.',
     user_id: 3,
-    ride_id: 2
+    ride_id: 12
   }
 ];
 
