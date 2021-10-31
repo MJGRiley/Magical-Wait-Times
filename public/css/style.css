@@ -1,3 +1,16 @@
 #homePageImg {
 width:735px;
 }
+
+.loginSubmit {
+    text-align: center;
+    margin-top: 8px;
+    font-family: 'Satisfy', cursive;
+}
+
+
+.newUserSubmit {
+    text-align: center;
+    margin-top: 35px;
+    font-family: 'Satisfy', cursive;
+}
